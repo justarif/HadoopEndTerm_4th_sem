@@ -15,7 +15,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class MyDriver {
+public class PrimeDriver {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
 		Configuration conf = new Configuration();
