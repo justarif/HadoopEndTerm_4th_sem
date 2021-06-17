@@ -14,11 +14,15 @@ public class MyReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 	public void reduce(Text key, Iterable<IntWritable> values, Context context)
 			throws IOException, InterruptedException {
 		int sum = 0;
-		if (key.equals("PrimeSum")) {
+		if (key.equals("Prime")) {
+			for (IntWritable value : values) {
+				sum += value.get();
+			}
+		}else{
 			for (IntWritable value : values) {
 				sum += value.get();
 			}
 		}
-	}
 		context.write(key, new IntWritable(sum));
+	}
 }
